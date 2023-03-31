@@ -1,0 +1,1401 @@
+@font-face {
+	font-family: "Noto Emoji";
+	src: url("../fonts/NotoEmoji.woff") format('woff');
+}
+body{
+	margin: 0px;
+	overflow-x: hidden;
+	height: 100vh;
+	background-color: white;
+}
+input:focus{
+	outline: none;
+}
+html,button{
+	cursor: url("../icons/ArrowSmall.cur"),default;
+}
+hr{
+	height: 1.5px;
+	background-color: #000000;
+}
+
+
+/* first screen this shows on first screen login and password*/
+.first-screen-canvas{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	overflow:hidden ;
+}
+
+.first-help {
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	
+   
+}
+.start-tutorial-class{
+	background-image: url("../icons/help-rev.svg");
+	width: 55px;
+	height: 55px;
+	background-position: center;
+}
+
+.first-help:hover {
+	background-color: #d5d5d5;
+	border-radius:5px ;
+   
+}
+.firstscreen-toolbar{
+	height: 55px;
+    padding: 0 57px;
+    color: white;
+    background-color: #ffffff;
+}
+
+.help-div{
+	display: flex;
+	height: 10%;
+}
+.user-div{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	align-items: center;
+	height: 90%;
+	padding-bottom:100px;
+}
+.box-design{
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	
+}
+.historybox{
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+}
+.box-design:hover{
+	background-color: #d5d5d5;
+	border-radius:11px;
+}
+.inner-history-div{
+	display: flex;
+	text-align:center ;
+	align-items: center;
+	background-color:#808080;
+	height: 40px;
+	width: 150px;
+	border-radius: 22px;
+}
+.history-user-icon{
+	background-image: url(../icons/owner-icon.svg);
+	height: 40px;
+	width: 40px;
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.spinnerDiv{
+	position: absolute;
+	bottom: 30%;
+	left: 48%;
+
+}
+
+/* login and signup form */
+.form-focus{
+	background-color: #e5e5e5;
+}
+.username-form{
+	border-radius: 22px;
+    height: 30px;
+    width: 270px;
+    margin-left: 30px;
+    padding-left: 10px;
+    font-size: 10pt;
+    border-style: inset;
+    border-width: 2px;
+    border-color: #d0d0d0 #f3f3f3 #f3f3f3 #d0d0d0;
+}
+
+
+.show-form{
+	display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.get-server-none{
+	display: none;
+}
+.get-server-addr{
+	display: flex;
+    flex-direction: column;
+    align-items: center
+
+}
+
+.error-code{
+	display: none;
+}
+.show-error{
+	display: block;
+    position: absolute;
+    font-size: 12pt;
+    color: #808080;
+    background-image: url(../icons/emblem-warning.svg);
+    background-repeat: no-repeat;
+    background-position: left 0%;
+    background-size: 30px 30px;
+    height: 35px;
+    width: 400px;
+    padding-left: 35px;
+    padding-top: 3px;
+    bottom: 85px;
+	left: 44%;
+   
+}
+/* choose user color vue */
+.change-user-color-parent-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+
+}
+
+.choose-user-color-scroll{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100px;
+	overflow: hidden;
+	height: 100px;
+	border-radius: 5px;
+
+}
+.choose-user-color-scroll:hover{
+	background-color: #d5d5d5;
+
+}
+.click-to-change{
+	font-size: 12pt;
+	align-items: center;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+
+/* main toolbar vue */
+.main-toolbar{
+	height: 55px;
+    padding: 0 57px;
+    color: rgb(0, 0, 0);
+    background-color: #282828;
+}
+.main-toolbar-inner{
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+}
+.nav-left-icons{
+	display: flex;
+    align-items: center;
+	height: 100%;
+	width: 70%;
+	gap: 25px;
+}
+.nav-right-icons{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 30%;
+	gap: 10px;
+	height: 100%;
+}
+
+.toolbutton {
+    position: relative;
+    width: 47px;
+    height: 47px;
+    margin: 4px 2px;
+    color: white;
+    color: transparent;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    border-radius: 5.5px;
+}
+.view-sync-button {
+    background-image: url("../icons/sync.svg");
+   
+}
+.view-tutoiral-button{
+	background-image: url("../icons/help.svg");
+}
+.view-cloud-button {
+    background-image: url("../icons/cloud-warning.svg");
+   
+}
+.view-list-button {
+    background-image: url("../icons/view-list.svg");
+}
+.view-neighbourhood-button {
+    background-image: url("../icons/view-neighborhood.svg");
+  
+}
+.view-radial-button {
+    background-image: url("../icons/view-radial.svg");
+   
+}
+.toolbutton:hover{
+	background-color: black;
+}
+.toolbutton.active {
+    background-color: #808080;
+}
+
+
+
+
+
+/* canvas document it is used in home screen and min view  */
+/* main screeen vue */
+/* mainscreen view home view */
+
+.canvas{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 92.5%;
+	overflow:hidden ;
+}
+
+
+
+.canvas-inner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	position: relative;
+	top: 0px;
+}
+
+.display-none-defualt{
+	display: none;
+}
+.show-radial-view{
+	display: flex;
+	height: 100%;
+}
+.show-neighbour-view{
+	display: flex;
+	height: 100%;
+}
+.show-list-view{
+	display: flex;
+	height: 100%;
+}
+.xo-and-journal-outer{
+	display: flex;
+	height: 160px;
+	width: 160px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.xo-user-icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 108px;
+	width: 108px;
+	background-size: 95px;
+	border-radius: 5px;
+}
+
+.xo-user-icon:hover{
+	background-color: #d0d0d0;
+}
+
+
+.tool-options{
+	background-color: black;
+	z-index: 1;
+	position: relative;
+	left: 40px;
+	top: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-width: 150px;
+	border: 2px solid #808080;
+	
+}
+.horizontal-row{
+	height:1.5px;
+	width: 100%;
+	color: white;
+	background-color: #808080;
+
+}
+.general-tool{
+	height: 45px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+.general-tool-child{
+	
+}
+.general-tool-child:hover{
+	background-color: #d5d5d5;
+	border-radius: 5px;
+}
+
+.user-icon-logo-colored{
+	background-image: url(../icons/owner-icon.svg);
+	width: 40px;
+	height: 40px;
+	background-size: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.my-settings-icon{
+	background-image: url(../icons/preferences-system.svg);
+	width: 40px;
+	height: 40px;
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.logoff-icon{
+	background-image: url(../icons/system-shutdown.svg);
+	width: 40px;
+	height: 40px;
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* list view css desing */
+.canvas-first-child{
+	height: 100%;
+	width: 100%;
+}
+.activity-main-row{
+	display: flex;
+	align-items: center;
+	height: 60px;
+	width: 100%;
+	padding-left:10px ;
+	gap: 15px;
+}
+.select-favourite{
+	height: 40px;
+	width: 40px;
+}
+.activity-icon-name{
+	display: flex;
+	align-items: center;
+	width: 25%;
+	height: 40px;
+	gap: 15px;
+}
+.activity-version{
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	min-width: 200px;
+	height: 40px;
+}
+.acitvity-help-icon{
+	background-image: url("../icons/help-rev.svg");
+	min-width: 250px;
+	height: 50px;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	
+}
+.list-and-journal-view-canvas{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 92.5%;
+	overflow-y: scroll;
+}
+.activity-icon{
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+}
+.activity-icon-image{
+	border-color: blue;
+	height: 35px;
+	width: 35px;
+}
+.activity-icon:hover{
+	background-color: #d5d5d5;
+}
+.select-favourite{
+	background-image: url("../icons/emblem-favorite.svg");
+	background-size: 22px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+}
+.select-favourite:hover{
+	background-color: #d5d5d5;
+}
+
+
+
+/* journal screen vue */
+.journal-icon{
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+	background-image: url("../icons/activity-journal.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 38px;
+	background-color: transparent;
+	border-radius: 5px;
+}
+.journal-icon:hover{
+	background-color: #d0d0d0;
+}
+
+.journal-toolbar{
+	height: 55px;
+    padding: 0 57px;
+    color: rgb(0, 0, 0);
+    background-color: #282828;
+	display: flex;
+}
+.journal-tutorial-icon{
+	background-image: url("../icons/help.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 47px;
+	height: 47px;
+	width: 47px;
+}
+.home-view-icon{
+	background-image: url(../icons/view-radial.svg);
+    position: absolute !important;
+    top: 0px;
+    right: 30px;
+}
+
+
+.left-journal-nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 15px;
+}
+.left-journal-nav-sub{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 15px;
+}
+
+
+.favourite-view-journal{
+	background-image: url("../icons/emblem-favorite.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.type-filter-journal-box{
+	font-size: 10pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 100%;
+	padding: 0px 10px 0px 10px
+}
+.type-filter-journal{
+	background-image: url("../icons/application-x-generic.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	height: 20px;
+	width: 20px;
+	
+
+}
+.date-filter-journal-box{
+	font-size: 10pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 100%;
+	padding: 0px 10px 0px 10px
+}
+.date-filter-journal{
+	background-image: url("../icons/view-created.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	height: 20px;
+	width: 20px;
+	
+}
+.sort-filter-box{
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sort-filter-journal{
+	background-image: url("../icons/view-lastedit.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 25px;
+	height: 25px;
+	width: 25px;
+}
+.copy-fromdevice-jorunal{
+	background-image: url("../icons/copy-from-device.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+	
+}
+
+.journal-bottom-nav{
+	height: 55px;
+    color: rgb(0, 0, 0);
+    background-color: #282828;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	display: flex;
+	align-items: center;
+}
+
+.left-bottom-journal-icons{
+	display: flex;
+	position: absolute;
+	left: 60px;
+	justify-content: center;
+	gap: 15px;
+	
+}
+.right-bottom-journal-icons{
+	display: flex;
+	position: absolute;
+	right: 40px;
+	justify-content: center;
+	gap: 20px;
+}
+.center-sync-journal-icon{
+	background-image: url("../icons/sync.svg");
+	background-position: center;
+	position: absolute;
+	left: 48%;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	height: 50px;
+	width: 50px;
+}
+
+
+.show-journal-bottom{
+	background-image: url("../icons/activity-journal.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	height: 48px;
+	width: 48px;
+}
+.show-cloud-one-bottom{
+	background-image: url("../icons/cloud-one.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	height: 48px;
+	width: 48px;
+}
+.show-cloud-all-bottom{
+	background-image: url("../icons/cloud-all.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	height: 48px;
+	width: 48px;
+}
+.go-right-journal-bottom{
+	background-image: url("../icons/go-right.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	height: 48px;
+	width: 48px;
+}
+.pagination-center-journal-bottom{
+	display: flex;
+	font-weight: bolder;
+	font-size: 18pt;
+	text-align: center;
+	color: white;
+	justify-content: center;
+	align-items: center;
+}
+.go-left-journal-bottom{
+	background-image: url("../icons/go-left.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	height: 48px;
+	width: 48px;
+}
+.journal-activity-row{
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 60px;
+	justify-content: space-between;
+}
+.row-right-side-journal-activity{
+	padding-left: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+.row-right-side-journal-timestamp{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding-right: 15px;
+}
+.star-and-checkbox-journal{
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+}
+.checkbox-style{
+	height: 22px;
+	width: 22px;
+}
+.mark-fav-icon{
+	background-image: url("../icons/emblem-favorite.svg");
+	width: 22px;
+    height: 22px;
+    background-size: 22px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.timestamp-journal{
+	display: flex;
+	flex-direction: row-reverse;
+	text-align: end;
+	width: 150px;
+
+}
+
+.go-right-open-acitivity{
+	background-image: url("../icons/go-right.svg");
+	width: 25px;
+    height: 25px;
+	padding: 3px;
+	background-size: 22px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+.go-right-open-acitivity:hover{
+	background-color: #d5d5d5;
+}
+.activity-name-journal{
+	font-weight: bold;
+}
+
+.first-split-left{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.second-split-right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.unselect-all-journal{
+	background-image: url("../icons/select-none.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+.select-all-journal{
+	background-image: url("../icons/select-all.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.copy-remote-journal{
+	background-image: url("../icons/copy-cloud-one.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.copy-shared-journal{
+	background-image: url("../icons/copy-cloud-all.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.copy-device-icon{
+	background-image: url("../icons/copy-to-device.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.duplicate-view-journal{
+	background-image: url("../icons/duplicate.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.erase-view-journal{
+	background-image: url("../icons/list-remove.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40px;
+	height: 40px;
+	width: 40px;
+}
+
+.select-toolbar{
+
+}
+.select-toolbar:hover{
+	background-color: #e5e5e5;
+	border-radius: 5px;
+
+}
+.journal-main-toolbar{
+
+}
+.journal-main-toolbar:hover{
+	background-color: #000000;
+}
+
+.splitbar {
+    background-image: url(../icons/split.svg);
+    width: 3px;
+    height: 47px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.show-count-of-selected-third-split{
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+/* Journal_nav buttom nav */
+.bottom-nav{
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.first-rightbutton{
+	position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 120px;
+}
+
+.icon-button{
+	display: flex;
+	align-items: center;
+	border-radius: 22px;
+    margin-top: 5px;
+    height: 35px;
+    background-color: #808080;
+    border: 2px solid #808080;
+}
+.icon-text{
+    color: white;
+    display: inline-block;
+	font-family:'Courier New', Courier, monospace;
+
+}
+.next-icon{
+	background-image: url(../icons/go-right.svg);
+    width: 30px;
+    height: 30px;
+    background-size: 20px 20px;
+	padding-left:15px;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+.back-icon{
+	background-image: url(../icons/go-left.svg);
+    width: 30px;
+    height: 30px;
+    background-size: 20px 20px;
+	padding-right:15px;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+
+.first-leftbutton{
+	position: absolute;
+    left: 50px;
+    bottom: 50px;
+    width: 120px;
+}
+
+.back-icon:hover{
+	background-size: 30px;
+	border-radius: 5px;
+	padding-right:15px;
+	
+}
+.next-icon:hover{
+	background-size: 30px;
+	border-radius: 5px;
+	padding-left:15px;
+	
+}
+/* end buttom nav */
+
+
+
+
+
+
+
+/* sugar vue password component*/
+.password-demo {
+	background-color: white;
+}
+
+.password-line {
+	vertical-align: middle;
+	text-align: center;
+	width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.password-input {
+	text-align: center;
+	display: inline-block;
+	border-width: 2px;
+	border-style: inset;
+	border-top-color: #9a9a9a;
+ 	border-right-color: #eeeeee;
+	border-bottom-color: #eeeeee;
+	border-left-color: #9a9a9a;
+	border-image: initial;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 30px;
+	width: 310px;
+	height: 36px;
+}
+
+.password-value {
+	font-size: 16pt;
+	font-family: "Noto Emoji";
+	border: none;
+	width: 270px;
+	padding: 4px;
+	line-height: 30px;
+	min-height: 30px;
+	background-color: white;
+	padding: 1px;
+	text-align: left;
+	outline: 0;
+	margin-left: 10px;
+	margin-top: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: inline-block;
+}
+
+.password-iconcancel {
+	position: relative;
+	background-image: url(../icons/entry-cancel.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 2px;
+	right: 10px;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	margin-left: 0px;
+	display: inline-block;
+}
+
+.password-label {
+	position: relative;
+	left: 20px;
+	margin-top: 20px;
+	color: #808080;
+	width: 350px;
+	margin-bottom: 5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.password-emojis {
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.password-emojis-line {
+}
+
+.password-emojis-category {
+	margin-top: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.emoji {
+	display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 2px solid #e5e5e5;
+}
+
+.emoji-selected {
+	background-color: white;
+}
+
+.emoji-unselected {
+	background-color: #e5e5e5;
+}
+
+.emoji-flash {
+	background-color: #e5e5e5;
+}
+
+.emoji-icon {
+	font-size: 24pt;
+	font-family: "Noto Emoji";
+	padding-left: 8px;
+	padding-top: 6px;
+	padding-right: 8px;
+}
+
+.emoji-letter {
+	font-size: 8pt;
+	text-align: right;
+	padding-right: 4px;
+	padding-bottom: 4px;
+}
+
+.emoji-category {
+	display: block;
+	border: 2px solid #e5e5e5;
+	border-radius: 0px 26px 26px 0px;
+}
+
+.emoji-category-icon {
+	font-size: 15pt;
+	font-family: "Noto Emoji";
+	padding-left: 8px;
+	padding-top: 6px;
+	padding-right: 8px;
+}
+
+.hidden-emoji {
+	font-family: "Noto Emoji";
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+}
+
+.password{
+	display: block;
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+}
+
+
+/* sugar-vue-SearchField */
+.search-field-main{
+	position:absolute;
+	top: 10px;
+	left: 40px;
+}
+
+.search-field-border {
+
+	border-radius: 22px;
+	width: 350px;
+	height: 35px;
+	display: flex;
+	position: relative;
+}
+
+.search-field-border-focus {
+	background-color: white;
+	border: 2px solid white;
+}
+
+.search-field-border-nofocus {
+	background-color: #e5e5e5;
+	border: 2px solid #e5e5e5;
+}
+
+.search-field-iconsearch {
+	position: absolute;
+	background-image: url(../icons/entry-search.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
+	left: 6px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.search-field-iconcancel {
+	position: absolute;
+	background-image: url(../icons/entry-cancel.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	right: 10px;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.search-field-input {
+	opacity: 1;
+	margin-left: 30px;
+	border: 0px !important;
+	display: flex;
+	border-radius: inherit;
+	background-color: #e5e5e5;
+	width: 270px;
+	line-height: 22px;
+	outline: 0;
+	font-size: 10pt;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.search-field-input:focus {
+	background-color: white;
+}
+
+.search-field-input:disabled {
+	border-color: #808080;
+	background-color: #808080;
+}
+
+
+
+
+/* sugar-vue-Dialog */
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.modal {
+	margin-top: 4%;
+	z-index: 5;
+	width: 800px;
+	height: 500px;
+}
+
+.dialog-content {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	max-height: 500px;
+	background-color: #000000;
+	border: 2px solid #808080;
+	color: white;
+	overscroll-behavior-y: contain;
+    overflow-y: auto;
+}
+
+.settings-filter-text {
+	position: relative;
+	margin-left: 10px;
+	margin-top: 5px;
+	width: 350px;
+}
+
+.settings-close-button {
+	background-image: url(../icons/dialog-cancel.svg);
+	position: absolute !important;
+	top: 5px;
+	right: 30px;
+	width: 35px !important;
+	height: 35px !important;
+}
+
+.toolbar {
+	height: 60px;
+	padding: 0 77px;
+	color: white;
+	background-color: #282828;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	position: sticky;
+	top: 0px;
+	display: flex;
+}
+
+.toolbar hr {
+	display: inline-block;
+	height: 45px;
+	margin: 4.5px;
+	margin-bottom: -21px;
+	border: 1px solid #808080;
+}
+
+.toolbar .toolbutton {
+	position: relative;
+	width: 67px;
+	height: 67px;
+	margin: 4px 2px;
+	color: white;
+	color: transparent;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 0;
+	border-radius: 7.5px;
+}
+
+.toolbar .toolbutton:hover {
+	background-color: black;
+}
+
+
+
+.module-icon {
+	position: absolute;
+	left: 10px;
+}
+
+.module-text {
+	margin: 20px 10px 0px 0px;
+	color: white;
+	word-wrap: break-word;
+}
+
+.module-cancel-button {
+	background-image: url(../icons/dialog-cancel.svg);
+	position: absolute !important;
+	top: 5px;
+	right: 60px;
+	width: 35px !important;
+	height: 35px !important;
+}
+
+.module-ok-button {
+	background-image: url(../icons/dialog-ok.svg);
+	position: absolute !important;
+	top: 5px;
+	right: 15px;
+	width: 35px !important;
+	height: 35px !important;
+}
+.main-content-box{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width:100%;
+	height: 440px;
+	flex-wrap:wrap;
+	
+}
+.content-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 40%;
+	width: 240px;
+}
+.conent-icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 70px;
+	width: 80px;
+	height: 80px
+	
+}
+.conent-icon:hover{
+	background-color:#d5d5d5;
+	border-radius: 5px;
+}
+.content-text{
+	padding-top: 10px;
+}
+.about-me-icon{
+	background-image: url(../icons/owner-icon.svg);
+}
+.about-mycomputer-icon{
+	background-image: url(../icons/module-about_my_computer.svg);
+}
+.about-myserver-icon{
+	background-image: url(../icons/cloud-settings.svg);
+}
+.about-mysecurity-icon{
+	background-image: url(../icons/login-icon.svg);
+}
+.about-myprivacy-icon{
+	background-image: url(../icons/privacy.svg);
+}
+.about-mylangauge-icon{
+	background-image: url(../icons/module-language.svg);
+}
+
+.aboutme-setting-content{
+	
+}
+.setting-native-view{
+	display: block;
+	color: #000000;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height:440px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+/* Handle small screen resolution */
+@media screen and (max-width: 410px) {
+	.search-field-border {
+		visibility: hidden;
+		width: 0px;
+	}
+
+	.search-field-input {
+		visibility: hidden;
+		width: 0px;
+	}
+	.settings-filter-text {
+		visibility: hidden;
+		width: 0px;
+	}
+}
+
+@media screen and (min-width: 410px) and (max-width: 1023px) {
+	.search-field-border {
+		width: 200px;
+	}
+	.activity-version{
+		justify-content: center;
+	}
+	.search-field-input {
+		width: 120px !important;
+	}
+}
+
+
